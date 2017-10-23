@@ -1,0 +1,14 @@
+@import url("../node_modules/angular-bootstrap-datetimepicker/src/css/datetimepicker.css");
+@import url("../bower_components/angularjs-slider/dist/rzslider.css");
+
+.huge {
+    font-size: 40px;
+}
+
+rzslider .rz-pointer {
+  background-color: #9b9b9b;
+}
+
+rzslider .rz-pointer.rz-active:after {
+  background-color: #3b3b3b;
+}

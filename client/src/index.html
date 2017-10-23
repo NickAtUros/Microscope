@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, width=device-width">
+    <title>Microscope</title>
+    <link href="app.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+
+    <script type="text/javascript">
+      // Load the google visualization libraries, and wait until they are loaded
+      google.load("visualization", "1.1", {packages:["sankey"]});
+      google.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        console.log("Google Libraries Initialized");
+      }
+    </script>
+  </head>
+  <body ng-app="microscopeClient">
+    <div ui-view="header" class="header"></div>
+    <div ui-view="content"></div>
+    <div ui-view="footer"></div>
+    <script src="app.js"></script>
+  </body>
+</html>

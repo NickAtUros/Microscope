@@ -1,0 +1,25 @@
+{
+  "name": "microscope-client",
+  "description": "Microscope SPA - Allow viewing / querying microservice flow information",
+  "main": "",
+  "authors": [
+    "Pranav Sathyanarayanan <pranav.sathy@gmail.com>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.4.8",
+    "angular-ui-router": "~0.2.15",
+    "angular-bootstrap": "~0.14.3",
+    "angularjs-slider": "~2.1.0"
+  }
+}

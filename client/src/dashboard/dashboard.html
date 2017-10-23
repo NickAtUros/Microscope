@@ -1,0 +1,68 @@
+<div class="container" ng-init="init()">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Microscope Dashboard</h1>
+        </div>
+    </div>
+
+    <div class="row">
+        <div ui-view="jumboMetadata"></div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-5">
+        <span uib-dropdown>
+          <label for="startselector">Start Date:</label>
+          <a href id="start-date-dropdown" uib-dropdown-toggle>
+            <div class="input-group">
+              <input id="startselector" type="text" class="form-control" data-ng-model="data.startDate"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            </div>
+          </a>
+          <ul class="uib-dropdown-menu" aria-labelledby="start-date-dropdown">
+            <datetimepicker data-ng-model="data.startDate"/>
+          </ul>
+        </span>
+      </div>
+      <div class="col-md-5">
+        <span uib-dropdown>
+          <label for="endselector">End Date:</label>
+          <a href id="end-date-dropdown" uib-dropdown-toggle>
+            <div class="input-group">
+              <input id="endselector" type="text" class="form-control" data-ng-model="data.endDate"><span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            </div>
+          </a>
+          <ul class="uib-dropdown-menu" aria-labelledby="end-date-dropdown">
+            <datetimepicker data-ng-model="data.endDate"/>
+          </ul>
+        </span>
+      </div>
+      <!-- Single button -->
+      <div class="col-md-2">
+        <label>Services:</label><br />
+        <div class="btn-group" uib-dropdown is-open="status.isopen">
+          <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
+            {{ data.currentService }} <span class="caret"></span>
+          </button>
+          <ul class="uib-dropdown-menu" role="menu" aria-labelledby="single-button">
+             <li ng-repeat="service in services">
+               <a href ng-click="setService(service)">{{service}}</a>
+             </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <br /><label>Refresh Interval (Seconds):</label>
+      <rzslider
+         rz-slider-model="slider.value"
+         rz-slider-options="slider.options"></rzslider>
+    </div>
+
+    <br /><hr /></br />
+
+
+    <center>
+      <sankey graph="sankeyGraph" width="100%" height="500px"></sankey>
+    </center>
+</div>

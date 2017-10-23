@@ -1,0 +1,12 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# User Endpoints
+POST   /insert                         controllers.FlowController.insert()
+GET    /count                          controllers.FlowController.count()
+POST   /fetchBetween                   controllers.FlowController.fetchBetween()
+GET    /distinctServices               controllers.FlowController.distinctServices()
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
